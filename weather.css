@@ -1,0 +1,248 @@
+:root {
+  --primary: #4a6bff;
+  --secondary: #6c5ce7;
+  --dark: #2d3436;
+  --light: #f5f6fa;
+  --card-bg: #ffffff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.weather-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#cityInput {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+#searchBtn {
+  width: 60px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+#searchBtn:hover {
+  background: var(--secondary);
+}
+
+.weather-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  color: var(--dark);
+}
+
+.main-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cityName {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: var(--dark);
+}
+
+.date {
+  color: #7f8c8d;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.temp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.temperature {
+  font-size: 72px;
+  font-weight: 300;
+  position: relative;
+}
+
+.temperature::after {
+  content: "°C";
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+}
+
+.weather-icon {
+  font-size: 50px;
+  color: var(--primary);
+}
+
+.description {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #7f8c8d;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: rgba(74, 107, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.stat-card i {
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.sun-info {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+}
+
+.sun-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sun-card i {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.sun-value {
+  font-size: 16px;
+}
+
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .temperature {
+    font-size: 60px;
+  }
+  
+  .weather-card {
+    padding: 20px;
+  }
+}
+/* Add these new styles to your existing CSS */
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #555;
+}
+
+.empty-icon {
+  font-size: 80px;
+  color: #a0c4ff;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.empty-state h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #4a6bff;
+}
+
+.empty-state p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.sample-locations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.sample-locations span {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.sample-btn {
+  background: rgba(74, 107, 255, 0.1);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #4a6bff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sample-btn:hover {
+  background: rgba(74, 107, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Update the weather-card to have min-height */
+.weather-card {
+  min-height: 400px;
+  /* rest of your existing weather-card styles */
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherSphere</title>
+  <link rel="stylesheet" href="weather.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="weather-container">
+    <div class="search-container">
+      <input type="text" id="cityInput" placeholder="Search city...">
+      <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="weather-card">
+      <div class="main-info">
+        <h1 id="cityName">-</h1>
+        <div id="currentDate" class="date">-</div>
+        <div class="temp-container">
+          <div id="currentTemp" class="temperature">-</div>
+          <div id="weatherIcon" class="weather-icon"></div>
+        </div>
+        <div id="weatherDesc" class="description">-</div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i class="fas fa-wind"></i>
+          <div class="stat-value" id="windSpeed">-</div>
+          <div class="stat-label">Wind</div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-tint"></i>
+          <div class="stat-value" id="humidity">-</div>
+          <div class="stat-label">Humidity</div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-temperature-low"></i>
+          <div class="stat-value" id="feelsLike">-</div>
+          <div class="stat-label">Feels Like</div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-compress-alt"></i>
+          <div class="stat-value" id="pressure">-</div>
+          <div class="stat-label">Pressure</div>
+        </div>
+      </div>
+
+      <div class="sun-info">
+        <div class="sun-card">
+          <i class="fas fa-sunrise"></i>
+          <div class="sun-value" id="sunrise">-</div>
+        </div>
+        <div class="sun-card">
+          <i class="fas fa-sunset"></i>
+          <div class="sun-value" id="sunset">-</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="error-message" id="errorMessage"></div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
